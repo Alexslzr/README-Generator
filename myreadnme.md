@@ -1,8 +1,6 @@
-
-# super project
+# Title
 
 ## Description
-Best project of all
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
@@ -12,17 +10,15 @@ Best project of all
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
-be carefull
 ## Usage
-be careful x2
 ## License
-undefined
-## Contributing
-yepa? 
+## Contributing 
 ## Tests 
-undefined
 ## Questions
-How to reach me <br>
-[Github Link](https://github.com/alexslzr)
 
-Mail: alejandroslzr17gmail.com
+How to reach me
+[Github Link](https://github.com)
+
+[Mail](alejandroslzr@gmail.com)
+
+

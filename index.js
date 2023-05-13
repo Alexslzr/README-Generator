@@ -1,34 +1,3 @@
-/*const inquirer = require('inquirer');
-const fs = require('fs');
-
-inquirer
-  .prompt([
-    {
-      type: 'input',
-      name: 'name',
-      message: 'What is your name?',
-    },
-    {
-      type: 'checkbox',
-      message: 'What languages do you know?',
-      name: 'stack',
-      choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
-    },
-    {
-      type: 'list',
-      message: 'What is your preferred method of communication?',
-      name: 'contact',
-      choices: ['email', 'phone', 'telekinesis'],
-    },
-  ])
-  .then((data) => {
-    const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
-
-    fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-      err ? console.log(err) : console.log('Success!')
-    );
-  });*/
-
 const inquirer = require('inquirer');
 const fs = require('fs');
 
@@ -46,7 +15,8 @@ const questions = [
     {
       type: 'input',
       name: 'installation',
-      message: 'what are the installation instructions?',
+      default: 'npm i',
+      message: 'what command should be run to install dependencies',
     },
     {
       type: 'input',
@@ -60,6 +30,18 @@ const questions = [
     },
     {
       type: 'input',
+      name: 'tests',
+      default: 'npm test',
+      message: 'What command should be run to test',
+    },
+    {
+      type: 'list',
+      message: 'What license does your project have',
+      name: 'licence',
+      choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None'],
+    },
+    {
+      type: 'input',
       name: 'github',
       message: 'What is your Github Username?',
     },
@@ -70,7 +52,7 @@ const questions = [
     }
 ];
 
-const generateReadMe = ({title, description, installation, usage,contributing, tests, licence, github, mail}) =>
+const generateReadMe = ({title, description, installation, usage, contributing, tests, licence, github, mail}) =>
 `
 # ${title}
 
@@ -85,20 +67,24 @@ ${description}
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
+to install necessary dependencies, run the following command;
+\`\`\`
 ${installation}
+\`\`\`
 ## Usage
 ${usage}
 ## License
-${licence}
+This Project is under ${licence} license.
 ## Contributing
 ${contributing} 
 ## Tests 
+To test the project please run the following command:
+\`\`\`
 ${tests}
+\`\`\`
 ## Questions
-How to reach me <br>
-[Github Link](https://github.com/${github})
-
-Mail: ${mail}
+If you have any other question about the repo you can contact me via mail at ${mail}<br>
+Get to know more of my work at [${github}](https://github.com/${github})
 `;
 
 
@@ -107,8 +93,7 @@ inquirer
   .prompt(questions)
   .then((answers) => {
     const readMeContent = generateReadMe(answers);
-
-    fs.writeFile('Readme.md', readMeContent, (err) =>
+    fs.writeFile('README.md', readMeContent, (err) =>
       err ? console.log(err) : console.log('Successfully created Readme.md!')
     );
   });

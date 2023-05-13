@@ -1,8 +1,8 @@
 
-# super project
+# Hola
 
 ## Description
-Best project of all
+uwu
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
@@ -12,17 +12,21 @@ Best project of all
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
-be carefull
+to install necessary dependencies, run the following command;
+```
+npm i
+```
 ## Usage
-be careful x2
+yepa
 ## License
-undefined
+This Project is under MIT license.
 ## Contributing
-yepa? 
+asasas 
 ## Tests 
-undefined
+To test the project please run the following command:
+```
+npm test
+```
 ## Questions
-How to reach me <br>
-[Github Link](https://github.com/alexslzr)
-
-Mail: alejandroslzr17gmail.com
+If you have any other question about the repo you can contact me via mail at alejandroslzr17@gmail.com<br>
+Get to know more of my work at [alexslzr](https://github.com/alexslzr)

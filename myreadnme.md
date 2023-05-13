@@ -10,6 +10,9 @@
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
+```
+ola
+```
 ## Usage
 ## License
 ## Contributing 

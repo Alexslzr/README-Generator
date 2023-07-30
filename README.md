@@ -22,6 +22,10 @@ The application will be invoked by using the following command:
 ```bash
 node index.js
 ```
+
+## Mock
+
+![ReadmeGenerator](./assets/Readmegenerator.png)
 ## License
 
 This project utilizes an MIT License. [Read more](https://choosealicense.com/licenses/mit/)
